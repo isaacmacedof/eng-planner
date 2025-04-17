@@ -1,0 +1,28 @@
+/* src/components/VideoSection.css */
+.video-section {
+  padding: 0px 0px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+.video-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #004d40;
+}
+
+.video-container iframe {
+  border-radius: 8px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.video-container iframe {
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+}

@@ -1,0 +1,51 @@
+/* src/components/PricingSection.css */
+.pricing-section {
+  padding: 40px 20px;
+  background-color: #f1f8e9;
+  text-align: center;
+}
+
+.pricing-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00796b;
+}
+
+.offer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages {
+  text-align: left;
+}
+
+.price {
+  background-color: #ff5722;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.purchase-button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #ff5722;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.purchase-button:hover {
+  background-color: #e64a19;
+}
+
+.faq-link {
+  margin-top: 20px;
+}
+
+.faq-link a {
+  color: #00796b;
+  font-size: 1.2rem;
+  text-decoration: none;
+}

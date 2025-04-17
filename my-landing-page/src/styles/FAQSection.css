@@ -1,0 +1,22 @@
+/* src/components/FAQSection.css */
+.faq-section {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00796b;
+}
+
+.faq-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.faq-section li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
