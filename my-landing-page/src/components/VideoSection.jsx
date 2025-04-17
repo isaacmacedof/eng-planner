@@ -8,7 +8,7 @@ const VideoSection = () => {
         <iframe
           width="100%"
           height="315"
-          src="https://www.youtube.com/embed/69PqKAhtsXQ" // Ajuste o link para o formato correto
+          src="https://www.youtube.com/embed/69PqKAhtsXQ?rel=0&modestbranding=1" // Ajuste o link para o formato correto
           title="Vídeo de Apresentação"
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

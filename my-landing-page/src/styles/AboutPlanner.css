@@ -2,43 +2,78 @@
   padding: 40px 20px;
   background-color: #ffffff;
   text-align: center;
-}
-
-.about-planner h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #00796b;
+  margin-top: 1rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
 }
 
 .about-planner h3 {
+  color: #00796b;
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 1.7rem;
+  margin-top: 0px;
 }
 
-.about-planner ul {
-  list-style: none;
+.features-list {
   padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 1.3rem;
 }
 
-.about-planner li {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.about-planner p {
-  font-size: 1rem;
+.features-list-item {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
+  padding: 0 10px;
+  font-size: 1.2rem;
 }
 
-.purchase-button {
-  padding: 10px 20px;
-  background-color: #ff5722;
-  color: white;
+.features-list-item p {
+  font-size: 1.1rem;
+  margin: 0;
+  text-decoration: none;
+}
+
+.about-check-icon {
+  color: #4caf50;
+  margin-right: 10px;
+  width: 3rem;
+  vertical-align: middle;
+}
+
+.p-promotion-AboutPlanner {
+  font-size: 1rem;
+  margin-bottom: 1.6rem;
+  text-decoration: underline;
+}
+
+.purchase-button-about-planner {
+  padding: 0.80rem 1.4rem;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  background-color: #e10914;
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-.purchase-button:hover {
-  background-color: #e64a19;
+.purchase-button-about-planner:hover {
+  background-color: #79e619;
+  transform: scale(1.1);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
 }

@@ -1,0 +1,92 @@
+.aboutMe {
+  padding: 20px;
+  border: #e64a19 solid 2px;
+  margin-bottom: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.aboutMe-title {
+  color: #00796b;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.aboutMe-title h3 {
+  margin: 0;
+  font-size: 2.3rem;
+  color: #e10914;
+  margin-right: 10px;
+}
+
+.personal-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.photo {
+  background-color: #e10914;
+  color: white;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.5rem;
+  margin-right: 0px;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 1.0rem;;
+}
+
+.aboutMe-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #e10914;
+}
+
+.aboutMe-text {
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+.info {
+  text-align: left;
+}
+
+.info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.purchase-button {
+  padding: 0.80rem 1.4rem;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  background-color: #e10914;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.purchase-button:hover {
+  background-color: #e64a19;
+}

@@ -7,15 +7,16 @@
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  margin-top: 0px;
+  font-size: 3rem;
   margin-bottom: 25px;
   color: #e10914;
 }
 
 .hero button {
-  padding: 0.60rem 1.2rem;
+  padding: 0.80rem 1.4rem;
   margin-top: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   background-color: #e10914;
   color: #ffffff;
   border: none;
@@ -39,7 +40,7 @@
 
 /* Efeito no hover para mudar a cor */
 .hero button:hover {
-  background-color: #c8100e;
+  background-color: #79e619;
 }
 
 .hero p {
