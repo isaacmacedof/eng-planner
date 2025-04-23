@@ -18,7 +18,7 @@ const AboutMe = () => {
             <p>De forma simples, você vai praticar através de leitura com histórias e contos de situações do dia a dia como ir ao mecânico, ou então algo que você precise na sua rotina.</p>
             <p>Esse livro foi estruturado e pensado para que você aprenda o máximo de vocabulário de forma prática e além da leitura, ainda vai contar com os áudios de todas as histórias para uma prática completa, treinando listening, vocabulário e speaking (lendo em voz alta).</p>
           </div>
-          <button className="purchase-button">Botão de Compra</button>
+          <button className="purchase-button">Compre Já!</button>
         </div>
       </div>
     </section>

@@ -9,27 +9,22 @@ import '../styles/PricingSection.css'; // Importando o CSS específico para o co
 const PricingSection = () => {
   return (
     <section className="pricing-section">
-      <h2>Tudo por Apenas:</h2>
+      <h2>OFERTA IMPERDÍVEL:</h2>
       <div className="offer">
         <div className="advantages">
-          <h3>Vantagens de ter o Planner</h3>
-          <ul>
-            <li>Vantagem 1</li>
-            <li>Vantagem 2</li>
-            <li>Vantagem 3</li>
-            <li>Vantagem 4</li>
-            <li>Vantagem 5</li>
-            <li>Vantagem 6</li>
+          <ul className="advantages-list">
+            <li>Como formar frases corretamente</li>
+            <li>Como se comunicar com confiança</li>
+            <li>Como entender o inglês falado</li>
+            <li>Como escrever melhor</li>
+            <li>Expressões e vocabulários essenciais</li>
           </ul>
         </div>
         <div className="price">
-          <h3>De (Valor fictício) por apenas X, ou até X vezes de Y!</h3>
+          <h3>De <span className='price-no-promo'>119,90</span> por apenas 55.90, ou até 10 vezes de <p className='price-destaque'>5,59!</p></h3>
           <button className="purchase-button">COMPRE JÁ</button>
           <p>PREÇO ATÉ HOJE! Aproveite antes que volte ao normal!</p>
         </div>
-      </div>
-      <div className="faq-link">
-        <a href="#faq">Perguntas Frequentes</a>
       </div>
     </section>
   );
