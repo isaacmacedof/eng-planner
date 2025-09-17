@@ -9,19 +9,19 @@ const HowItWorks = () => {
       <div className="how-it-works-list">
         <div className="how-it-works-item">
           <img className='HowItWorks-check-icon' src={checkIcon} />
-          <p>Conteúdo no seu nível: básico, intermediário e avançado</p>
+          <p>Conteúdo dos níveis básico ao avançado (A1 ao B2)</p>
         </div>
         <div className="how-it-works-item">
           <img className='HowItWorks-check-icon' src={checkIcon} />
-          <p>Situações reais do dia a dia para aplicar na prática</p>
+          <p>Pratique listening, reading, writing, speaking, grammar e vocabulary</p>
         </div>
         <div className="how-it-works-item">
           <img className='HowItWorks-check-icon' src={checkIcon} />
-          <p>Exercícios práticos e explicações simples</p>
+          <p>Mantenha sua rotina de maneira autônoma e significativa</p>
         </div>
         <div className="how-it-works-item">
           <img className='HowItWorks-check-icon' src={checkIcon} />
-          <p>Método testado e aprovado por alunos</p>
+          <p>Estude em casa e na hora que você quiser</p>
         </div>
       </div>
     </section>

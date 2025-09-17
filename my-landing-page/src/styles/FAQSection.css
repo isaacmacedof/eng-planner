@@ -1,22 +1,116 @@
-/* src/components/FAQSection.css */
 .faq-section {
   padding: 40px 20px;
   background-color: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
   text-align: left;
+  margin-top: 20px;
+  padding-top: 1px;
 }
 
 .faq-section h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #00796b;
+  margin-left: 20px;
+  color: #000000;
 }
 
 .faq-section ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
   padding: 0;
+  margin: 0;
+}
+
+.faq-question {
+  display: flex;
+  flex-direction: row; /* Inicialmente o layout está em linha */
+  align-items: center;
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: row; /* Inicialmente o layout está em linha */
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #d5d8dc;
+  padding: 10px;
+  margin: 0px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-3px);
+}
+
+.faq-question-text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  flex-grow: 1; /* Garante que o texto ocupe o espaço restante */
+  margin-left: 10px;
+}
+
+.faq-answer-container {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: height 0.3s ease, opacity 0.3s ease;
+  margin-top: 10px;
+}
+
+.faq-answer-container.expanded {
+  height: auto;
+  opacity: 1;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  padding: 10px;
+  margin: 0px;
+  border: 2px solid #d5d8dc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .faq-section li {
   font-size: 1rem;
-  margin-bottom: 10px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  padding: 10px;
+  margin: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question-image {
+  width: 5%;
+  margin-right: 10px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.maisIcon {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Quando a pergunta for expandida, o layout vai mudar para coluna */
+.faq-item.expanded {
+  flex-direction: column; /* Alinha verticalmente a pergunta e a resposta */
+  align-items: flex-start; /* Garante que o ícone e o texto fiquem alinhados corretamente */
 }

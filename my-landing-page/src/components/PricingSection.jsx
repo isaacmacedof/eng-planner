@@ -13,11 +13,11 @@ const PricingSection = () => {
       <div className="offer">
         <div className="advantages">
           <ul className="advantages-list">
-            <li>Como formar frases corretamente</li>
-            <li>Como se comunicar com confiança</li>
-            <li>Como entender o inglês falado</li>
-            <li>Como escrever melhor</li>
-            <li>Expressões e vocabulários essenciais</li>
+            <li className='pricing-list-itens'>Como formar frases corretamente</li>
+            <li className='pricing-list-itens'>Como se comunicar com confiança</li>
+            <li className='pricing-list-itens'>Como entender o inglês falado</li>
+            <li className='pricing-list-itens'>Como escrever melhor</li>
+            <li className='pricing-list-itens'>Expressões e vocabulários essenciais</li>
           </ul>
         </div>
         <div className="price">
