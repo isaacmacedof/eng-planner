@@ -11,3 +11,49 @@
   padding: 20px;
   background-color: #e0f7fa;
 }
+
+body button.purchase-button {
+  padding: 0.8rem 1.4rem;
+  font-size: 1.7rem;
+  background-color: #e10914 !important; /* Vermelho! */
+  color: #ffffff !important;           /* Branco! */
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3) !important;
+  transition: background-color 0.3s ease, transform 0.3s ease !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  line-height: 1.5 !important; /* Adicionado para consistência */
+}
+
+/* O :hover também precisa de !important */
+body button.purchase-button:hover {
+  background-color: #c62828 !important; /* Vermelho escuro */
+  transform: scale(1.05) !important;
+  color: #ffffff !important;
+}
+
+/* =================================== */
+/* RESPONSIVIDADE GLOBAL DO BOTÃO      */
+/* =================================== */
+
+@media (min-width: 768px) {
+  body button.purchase-button {
+    font-size: 1.8rem;
+    padding: 1rem 1.8rem;
+  }
+}
+@media (min-width: 1080px) {
+  body button.purchase-button {
+    font-size: 2rem;
+    padding: 1.1rem 2.5rem;
+  }
+}
+@media (min-width: 1920px) {
+  body button.purchase-button {
+    font-size: 2.2rem;
+    padding: 1.2rem 3.5rem;
+  }
+}

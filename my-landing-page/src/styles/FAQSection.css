@@ -1,18 +1,24 @@
+/* src/styles/FAQSection.css */
+
+/* =================================== */
+/* 1. ESTILOS BASE (MOBILE-FIRST)      */
+/* (Para ecrãs < 768px)                */
+/* =================================== */
 .faq-section {
   padding: 40px 20px;
   background-color: #ffffff;
   border-radius: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
-  max-width: 800px;
+  max-width: 800px; /* Largura base (boa para mobile/tablet) */
   text-align: left;
   margin-top: 20px;
-  padding-top: 1px;
 }
 
 .faq-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+  font-size: 1.8rem; /* Tamanho base */
+  text-align: center;
+  margin-bottom: 60px;
   margin-left: 20px;
   color: #000000;
 }
@@ -27,90 +33,143 @@
 
 .faq-question {
   display: flex;
-  flex-direction: row; /* Inicialmente o layout está em linha */
+  flex-direction: row;
   align-items: center;
+  width: 100%; 
+  font-size: 1rem; /* Tamanho base */
+  font-weight: 500; /* Mais peso na pergunta */
 }
 
 .faq-item {
   display: flex;
-  flex-direction: row; /* Inicialmente o layout está em linha */
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid #d5d8dc;
-  padding: 10px;
-  margin: 0px;
-  margin-bottom: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid #d5d8dc; /* Apenas borda em baixo (mais limpo) */
+  padding: 15px 10px; /* Mais padding vertical */
+  margin: 0;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+/* Remove a borda do último item */
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-item:hover {
   background-color: #f1f1f1;
-  transform: translateY(-3px);
-}
-
-.faq-question-text {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #333;
-  flex-grow: 1; /* Garante que o texto ocupe o espaço restante */
-  margin-left: 10px;
 }
 
 .faq-answer-container {
   overflow: hidden;
-  height: 0;
   opacity: 0;
-  transition: height 0.3s ease, opacity 0.3s ease;
-  margin-top: 10px;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out; /* Transição mais suave */
+  margin-top: 0;
+  width: 100%;
+  max-height: 0; /* Usar max-height para transição */
 }
 
 .faq-answer-container.expanded {
-  height: auto;
+  max-height: 300px; /* Altura máxima que a resposta pode ter */
   opacity: 1;
+  margin-top: 15px; /* Espaço quando a resposta abre */
 }
 
 .faq-answer {
-  font-size: 1rem;
+  font-size: 1rem; /* Tamanho base */
   font-weight: 400;
   line-height: 1.5;
   color: #333;
-  padding: 10px;
+  padding: 15px;
   margin: 0px;
-  border: 2px solid #d5d8dc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  background-color: #f9f9f9; /* Fundo suave para a resposta */
+  border: 1px solid #d5d8dc;
+  border-radius: 8px;
 }
 
-.faq-section li {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #333;
-  padding: 10px;
-  margin: 0px;
-  margin-bottom: 0px;
-  display: flex;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.faq-question-image {
-  width: 5%;
+.faq-icon-container {
+  width: 24px; /* Tamanho base */
+  height: 24px; /* Tamanho base */
   margin-right: 10px;
   margin-left: 5px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-shrink: 0; 
 }
 
-.maisIcon {
+.faq-icon {
   width: 100%;
+  height: 100%;
+  fill: #333; 
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
-/* Quando a pergunta for expandida, o layout vai mudar para coluna */
-.faq-item.expanded {
-  flex-direction: column; /* Alinha verticalmente a pergunta e a resposta */
-  align-items: flex-start; /* Garante que o ícone e o texto fiquem alinhados corretamente */
+/* =================================== */
+/* 2. TABLETS E PORTÁTEIS PEQUENOS     */
+/* (Para ecrãs > 768px)                */
+/* =================================== */
+@media (min-width: 768px) {
+  .faq-section h2 {
+    font-size: 2.2rem;
+  }
+  .faq-question {
+    font-size: 1.1rem;
+  }
+  .faq-answer {
+    font-size: 1.1rem;
+  }
+  .faq-icon-container {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* =================================== */
+/* 3. DESKTOPS FULL HD (1080p)         */
+/* (Para ecrãs > 1080px)               */
+/* =================================== */
+@media (min-width: 1080px) {
+  .faq-section {
+    max-width: 1000px; /* Aumenta o container */
+  }
+  .faq-section h2 {
+    font-size: 2.5rem;
+  }
+  .faq-question {
+    font-size: 1.2rem;
+  }
+  .faq-answer {
+    font-size: 1.2rem;
+  }
+  .faq-icon-container {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* =================================== */
+/* 4. DESKTOPS 4K E ULTRA-WIDE         */
+/* (Para ecrãs > 1920px)               */
+/* =================================== */
+@media (min-width: 1920px) {
+  .faq-section {
+    max-width: 1200px; /* Aumenta mais o container */
+  }
+  .faq-section h2 {
+    font-size: 3rem;
+  }
+  .faq-question {
+    font-size: 1.3rem;
+  }
+  .faq-answer {
+    font-size: 1.3rem;
+  }
+  .faq-icon-container {
+    width: 30px;
+    height: 30px;
+  }
 }

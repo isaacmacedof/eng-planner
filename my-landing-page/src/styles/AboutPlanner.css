@@ -1,17 +1,28 @@
+/* src/styles/AboutPlanner.css */
+
+/* =================================== */
+/* 1. ESTILOS BASE (MOBILE-FIRST)      */
+/* (Para ecrãs < 768px)                */
+/* =================================== */
 .about-planner {
   padding: 40px 20px;
   background-color: #ffffff;
   text-align: center;
   margin-top: 1rem;
-  border-radius: 50px;
-  margin-bottom: 1rem;
+  border-radius: 40px; 
+  margin-bottom: 4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-planner h3 {
   color: #000000;
-  font-size: 1.5rem;
-  margin-bottom: 1.7rem;
+  font-size: 1.8rem; /* Tamanho base para telemóvel */
+  line-height: 1.4;
+  margin-bottom: 2rem; 
   margin-top: 0px;
+  max-width: 600px; /* Limite para telemóvel */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .features-list {
@@ -19,63 +30,133 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   list-style: none;
   margin-bottom: 1.3rem;
 }
 
 .features-list-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start; 
   margin-bottom: 20px;
   padding: 0 10px;
   font-size: 1.2rem;
+  text-align: left; 
+  gap: 15px; 
+  max-width: 600px; /* Limite para telemóvel */
 }
 
 .features-list-item p {
-  font-size: 1.1rem;
+  font-size: 1.1rem; /* Tamanho base para telemóvel */
   margin: 0;
-  text-decoration: none;
+  color: #333;
+  line-height: 1.6;
 }
 
-.about-check-icon {
-  color: #4caf50;
-  margin-right: 10px;
-  width: 3rem;
-  vertical-align: middle;
+.feature-icon {
+  fill: #e10914; 
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  margin-top: 3px; 
 }
 
 .p-promotion-AboutPlanner {
-  font-size: 1rem;
+  font-size: 1.1rem; /* Tamanho base para telemóvel */
+  font-weight: 500;
   margin-bottom: 1.6rem;
   text-decoration: underline;
+  color: #333;
 }
 
-.purchase-button-about-planner {
-  padding: 0.80rem 1.4rem;
-  margin-top: 1rem;
-  font-size: 1.7rem;
-  background-color: #e10914;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
+/* NOTA: Os estilos do .purchase-button e .purchase-button:hover 
+   são genéricos e devem ser aplicados. O CSS abaixo vai
+   APENAS ajustar o tamanho para este botão específico
+   em ecrãs maiores. */
 
-.purchase-button-about-planner:hover {
-  background-color: #79e619;
-  transition: background-color 0.3s ease;
-  transform: scale(1.1);
-}
-
-/* Desktop */
+/* =================================== */
+/* 2. TABLETS E PORTÁTEIS PEQUENOS     */
+/* (Para ecrãs > 768px)                */
+/* =================================== */
 @media (min-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
+  .about-planner h3 {
+    font-size: 2.2rem;
   }
 
-  .hero p {
+  .features-list-item p {
     font-size: 1.2rem;
+  }
+
+  .p-promotion-AboutPlanner {
+    font-size: 1.2rem;
+  }
+
+  /* Ajusta o tamanho do botão para tablets */
+  .about-planner .purchase-button {
+    font-size: 1.8rem;
+    padding: 1rem 1.8rem;
+  }
+}
+
+/* =================================== */
+/* 3. DESKTOPS FULL HD (1080p)         */
+/* (Para ecrãs > 1080px)               */
+/* =================================== */
+@media (min-width: 1080px) {
+  .about-planner h3 {
+    font-size: 2.5rem;
+    max-width: 800px; /* Permite que o texto ocupe mais espaço */
+  }
+
+  .features-list-item {
+    max-width: 800px; /* Permite que o texto ocupe mais espaço */
+  }
+
+  .features-list-item p {
+    font-size: 1.25rem;
+  }
+
+  .p-promotion-AboutPlanner {
+    font-size: 1.25rem;
+  }
+
+  /* Ajusta o tamanho do botão para FHD */
+  .about-planner .purchase-button {
+    font-size: 2rem;
+    padding: 1.1rem 2.5rem;
+  }
+}
+
+/* =================================== */
+/* 4. DESKTOPS 4K E ULTRA-WIDE         */
+/* (Para ecrãs > 1920px)               */
+/* =================================== */
+@media (min-width: 1920px) {
+  .about-planner h3 {
+    font-size: 3rem;
+    max-width: 1000px; /* Mais espaço para 4K */
+  }
+
+  .features-list-item {
+    max-width: 1000px; /* Mais espaço para 4K */
+  }
+
+  .features-list-item p {
+    font-size: 1.3rem;
+  }
+  
+  .feature-icon {
+    width: 35px; /* Ícone um pouco maior */
+    height: 35px;
+  }
+
+  .p-promotion-AboutPlanner {
+    font-size: 1.3rem;
+  }
+
+  /* Ajusta o tamanho do botão para 4K */
+  .about-planner .purchase-button {
+    font-size: 2.2rem;
+    padding: 1.2rem 3.5rem;
   }
 }

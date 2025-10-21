@@ -1,101 +1,149 @@
-/* src/components/PricingSection.css */
+/* src/styles/PricingSection.css */
+
 .pricing-section {
   padding: 40px 20px;
-  background-color: #ffffff;
-  border-radius: 50px;
-  margin-bottom: 1rem;
   text-align: center;
 }
 
 .pricing-section h2 {
   font-size: 2.4rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #000000;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .offer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
+  gap: 30px;
+  width: 100%; /* GARANTE A CENTRALIZAÇÃO */
 }
 
+/* Coluna 1: Vantagens */
+.advantages {
+  width: 100%;
+  max-width: 500px;
+}
 .advantages-list {
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  list-style: none;
-  line-height: 1.7;
-  list-style: none;
-  margin-bottom: 1.5rem
+  gap: 15px;
 }
-
 .pricing-list-itens {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.advantages {
+  align-items: flex-start;
+  gap: 15px;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.5;
   text-align: left;
 }
+.advantage-icon-wrapper { flex-shrink: 0; }
+.advantage-icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+  /* --- CORRIGIDO: Ícones vermelhos da marca --- */
+  fill: #e10914; 
+}
 
+/* Coluna 2: Caixa de Preço (O Card) */
 .price {
   background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 20px;
-  border-radius: 5%;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  color: #333;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
 }
 
-.price-no-promo {
-  background-color: #ffffff;
-  text-decoration: line-through;
-  color: rgb(255, 0, 0);
-}
+/* Estilos de Preço */
+.price-original-line { font-size: 1.2rem; font-weight: 500; }
+.price-no-promo { text-decoration: line-through; color: #e10914; font-weight: 600; }
+.price-main { font-size: 1.5rem; font-weight: 600; margin-top: 10px; }
+.price-installments { font-size: 1.2rem; font-weight: 500; }
+.price-destaque { font-size: 3.5rem; font-weight: 700; color: #000000; margin: 0; line-height: 1; }
 
-.price-destaque {
-  color: #000000;
-  font-size: 2.4rem;
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: -15px;
-}
-
-.purchase-button {
-  padding: 10px 20px;
-  background-color: #ffffff;
-  color: #ff5722;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.purchase-button:hover {
-  background-color: #e64a19;
-}
-
-.faq-link {
+/* --- CORRIGIDO: Botão vermelho forçado --- */
+.price .purchase-button {
+  width: 100%;
+  padding: 1rem;
   margin-top: 20px;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+  /* Garantia de que o botão é vermelho */
+  background-color: #e10914;
+  color: #ffffff;
+  border: none; /* Garante que não tem bordas cinzentas */
+  cursor: pointer; /* Garante o cursor */
 }
 
-.faq-link a {
-  color: #00796b;
-  font-size: 1.2rem;
-  text-decoration: none;
+/* O :hover vermelho escuro (genérico) vai funcionar */
+.purchase-button:hover {
+  background-color: #c62828;
 }
 
-@media (min-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
+/* Selos de Confiança (Cor neutra, como na referência) */
+.trust-badge-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  gap: 10px;
+}
+.trust-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #555;
+  max-width: 100px;
+}
+.trust-badge svg {
+  width: 30px;
+  height: 30px;
+  fill: #555;
+  margin-bottom: 5px;
+}
+
+/* =================================== */
+/* RESPONSIVIDADE (Desktop) - CORRIGIDA */
+/* =================================== */
+@media (min-width: 992px) {
+  .offer {
+    flex-direction: row; 
+    align-items: flex-start;
+    /* --- CORREÇÃO DA CENTRALIZAÇÃO --- */
+    justify-content: center; /* Centraliza o conteúdo */
+    max-width: 1000px;       /* Define uma largura máxima para o bloco */
+    margin: 0 auto;
   }
 
-  .hero p {
+  /* Define larguras relativas para as colunas */
+  .advantages {
+    flex: 1; /* Ocupa 50% do espaço */
+    max-width: 500px;
+    margin-top: 70px;
+    margin-right: -50px;
+  }
+  .price {
+    flex: 1; /* Ocupa 50% do espaço */
+    margin-top: 10px;
+    max-width: 450px;
+  }
+  
+  .pricing-list-itens {
     font-size: 1.2rem;
   }
 }
