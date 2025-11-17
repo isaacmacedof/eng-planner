@@ -7,6 +7,7 @@ import FAQSection from './components/FAQSection';
 import PricingSection from './components/PricingSection';
 import Footer from './components/Footer';
 import AboutMe from './components/AboutMe'; // Importando o componente AboutMe
+import Feedbacks from './components/Feedbacks'; // Importando o componente Feedbacks
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <AboutPlanner />
       <HowItWorks />
+      <Feedbacks />
       <AboutMe />
       <PricingSection />
       <FAQSection />

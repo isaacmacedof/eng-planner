@@ -1,0 +1,219 @@
+/* src/styles/Feedbacks.css */
+
+.feedbacks-section {
+  padding: 40px 10px; /* Reduzi o padding lateral para dar mais espaço ao conteúdo no mobile */
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 1200px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feedbacks-section h2 {
+  font-size: 1.8rem; /* Leve ajuste para mobile */
+  margin-bottom: 30px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0 10px;
+}
+
+/* Wrapper: Segura [Botão] [Lista] [Botão] */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  gap: 5px; /* Gap pequeno no mobile para caber tudo */
+}
+
+/* A Lista Deslizante */
+.feedbacks-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth; 
+  
+  /* IMPORTANTE: O carrossel ocupa o espaço que sobra entre os botões */
+  flex: 1; 
+  width: 0; /* Truque CSS para impedir que o flex item estoure o container */
+  
+  gap: 20px; /* Espaço entre os cards (invisível quando é 1 por vez, mas útil) */
+  padding: 10px 5px; /* Pequeno respiro para a sombra */
+  
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  
+  /* Scroll Snap Obrigatório */
+  scroll-snap-type: x mandatory; 
+}
+
+.feedbacks-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- O CARD --- */
+.feedback-card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  text-align: left;
+  
+  display: flex;
+  flex-direction: column;
+  
+  /* ALINHAMENTO */
+  scroll-snap-align: center; /* Centraliza o card */
+  
+  /* IMPEDE ENCOLHER */
+  flex-shrink: 0; 
+  
+  /* --- TAMANHO PADRÃO (MOBILE) --- */
+  /* Ocupa 100% do espaço DO CARROSSEL (espaço entre setas) */
+  flex-basis: 100%; 
+  width: 100%; 
+  box-sizing: border-box; /* Garante que o padding não aumenta a largura */
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.feedback-avatar {
+  width: 50px; /* Um pouco menor no mobile */
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e10914;
+  flex-shrink: 0;
+}
+
+.feedback-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.feedback-role {
+  font-size: 0.8rem;
+  color: #666;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.feedback-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star-icon {
+  width: 16px;
+  height: 16px;
+  color: #e10914;
+}
+
+.feedback-text {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* --- BOTÕES (SETAS) --- */
+.carousel-btn {
+  background-color: #e10914;
+  color: white;
+  border: none;
+  
+  /* Tamanho menor para Mobile */
+  width: 35px; 
+  height: 35px;
+  min-width: 35px; /* Garante que não esmaga */
+  
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.2s;
+  flex-shrink: 0; /* Impede o botão de sumir */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background-color: #c62828;
+  transform: scale(1.1);
+}
+
+/* =================================== */
+/* RESPONSIVIDADE                      */
+/* =================================== */
+
+/* TABLET e DESKTOP */
+@media (min-width: 768px) {
+  .feedbacks-section {
+    padding: 40px 20px;
+  }
+
+  .feedbacks-section h2 {
+    font-size: 2.4rem;
+  }
+
+  .carousel-wrapper {
+    gap: 20px; /* Mais espaço entre setas e cards */
+  }
+
+  .carousel-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+  }
+
+  .feedback-avatar {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .feedback-info h3 { font-size: 1.1rem; }
+  .feedback-text { font-size: 1rem; }
+}
+
+/* LÓGICA DE QUANTIDADE DE CARDS */
+
+/* Tablet: 2 Cards */
+@media (min-width: 768px) {
+  .feedback-card {
+    /* (100% - 1 gap de 20px) / 2 */
+    flex-basis: calc((100% - 20px) / 2);
+  }
+  
+  .feedbacks-carousel {
+    scroll-snap-align: start; /* Alinha à esquerda no tablet/desktop */
+  }
+}
+
+/* Desktop: 3 Cards */
+@media (min-width: 992px) {
+  .feedback-card {
+    /* (100% - 2 gaps de 20px) / 3 */
+    flex-basis: calc((100% - 40px) / 3);
+  }
+}
+
+/* 4K */
+@media (min-width: 1920px) {
+  .feedbacks-section h2 {
+    font-size: 3rem;
+  }
+  .feedback-text {
+    font-size: 1.1rem;
+  }
+}

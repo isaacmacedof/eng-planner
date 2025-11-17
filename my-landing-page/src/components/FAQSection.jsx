@@ -8,12 +8,12 @@ const FAQSection = () => {
   // O teu array faqItems continua exatamente igual...
   const faqItems = [
     {
-      question: "Como é liberado o acesso ao livro?",
-      answer: "Após a compra, você receberá um link para download do livro em formato digital."
+      question: "Para quem é esse planner?",
+      answer: "Esse planner foi pensado para autodidatas e pessoas com pouco tempo que querem organizar seus estudos de inglês de forma prática e leve."
     },
     {
-      question: "Em quanto tempo o acesso é liberado?",
-      answer: "O acesso é liberado imediatamente após a confirmação do pagamento."
+      question: "Preciso já saber inglês para usar o planner?",
+      answer: "Não! O planner pode ser usado por iniciantes, intermediários ou avançados. Ele se adapta ao seu nível e à sua rotina."
     },
     {
       question: "Como recebo os áudios para prática?",

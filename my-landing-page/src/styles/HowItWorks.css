@@ -13,7 +13,7 @@
    Tornamos o texto maiúsculo e mais pesado. */
 .how-it-works h2 {
   font-size: 2.4rem;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   color: #000000;
   text-transform: uppercase;
   font-weight: 700; /* Mais pesado/bold */
